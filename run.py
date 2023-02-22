@@ -152,10 +152,9 @@ def generate_keys(num=1):
 
             logger.info("#" + str(i) + ", " + email_address)
 
-            url = "https://rest.coinapi.io/www/freeplan"
+            url = "https://www.coinapi.io/www/freeplan"
 
-            payload = {"email": email_address, "name": names.get_full_name(), "title": names.get_last_name(),
-                       "company": random.choice(["1-10", "10-50", "50-250", "250-1000", "1000+"])}
+            payload = {"email": email_address, "recaptha3token": "03AFY_a8XzG9s_KT_cB-3WH2_20r1_6K62I9HstQqWQX9giVI1hdf26FnhG6CRfeq5zIXAHVaGHwzx6XscjJIND2xAlSh3b2lKnDhovC3c_u3nzlaePQY3CjxmJeAdQfDnWgsKP9j_Z218BoOijHj9jhMRw0QhgEzJU111T6Eo7zkcWkbPlTRXprfK7bLwn9KLyQVnn_NR6u6mB6nP_qmQrUdsQApdoi-hpE7zmBsBzqtXG9X1Ca432rxgoymRsIs8z27h7RhMDFq8IEzKQaRmDhnC17ikfAoVwVayl7Sdjcr01TMOSFq1RrgyuHEG6pFEdRwhRXLKEetTuee4Thyfb2DsAVw4McjVmEFq8TogOsmXfYIn4wbF7DaOxDn6BvUZUF04xr0kHvK94ljby3oD-luqK0NwTBjDuJcbvT3KZSk63HNISnqGB_VdJuJVcczD0WusBcCv8yX4xq4vE0aAcx13GXm3x5r6pO8_CxSmTCn2jwi33WMWJWpatlxgQXGuE1I8XyAdBfw1sW76CyaPj5QmpUYEgtw298_reYXASfAqifa-a3zZ0U6ZQiuA74Hm7V8PIfN8K5N7"}
 
             r = make_prequest("POST", url, json=payload)
             response = r.text
