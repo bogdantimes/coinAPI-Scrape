@@ -147,7 +147,7 @@ def generate_keys(num=1):
             session = GuerrillaMailSession()
             email_address = session.get_session_state()['email_address'].split('@')[0] + '@' + random.choice(
                 ['sharklasers.com', 'guerrillamail.info', 'grr.la', 'guerrillamail.biz', 'guerrillamail.com',
-                 'guerrillamail.de', 'guerrillamail.net', 'guerrillamail.org', 'guerrillamailblock.com', 'pokemail.net',
+                 'guerrillamail.de', 'guerrillamail.net', 'guerrillamail.org', 'guerrillamailblock.com',
                  'spam4.me'])
 
             logger.info("#" + str(i) + ", " + email_address)

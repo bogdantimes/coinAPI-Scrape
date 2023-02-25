@@ -15,6 +15,10 @@ bash Anaconda3-5.2.0-Linux-x86_64.sh
 pip install -r requirements.txt
 ```
 
+```bash
+python run.py --symbol=BINANCE_SPOT_BTC_USDT --from=2023-01-01 --generate_keys=100
+```
+
 ## Example, try:
 ```
 python run.py --symbol=BITSTAMP_SPOT_LTC_USD  --source=ohlcv --from=2018-08-23 --proxy_type=rotate --period=1HRS --filetype=csv --timeout=20
